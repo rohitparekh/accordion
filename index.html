@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion using html css javascript</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="main-container">
+        <div class="outer">
+            <div class="accordion accordion-1"
+            onclick="toggle(1)">
+                <h4>Front End Developer</h4>
+                <i class='bx bx-plus icon-1'></i>
+            </div>
+            <div class="content content-1">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                </p>
+            </div>
+        </div>
+        <div class="outer">
+            <div class="accordion accordion-2"
+            onclick="toggle(2)">
+                <h4>Back End Developer</h4>
+                <i class='bx bx-plus icon-2'></i>
+            </div>
+            <div class="content content-2">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                </p>
+            </div>
+        </div>
+        <div class="outer">
+            <div class="accordion accordion-3"
+            onclick="toggle(3)">
+                <h4>Full Stack Developer</h4>
+                <i class='bx bx-plus icon-3'></i>
+            </div>
+            <div class="content content-3">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                </p>
+            </div>
+        </div>
+        <div class="outer">
+            <div class="accordion accordion-4"
+            onclick="toggle(4)">
+                <h4>DevOps Engineer</h4>
+                <i class='bx bx-plus icon-4'></i>
+            </div>
+            <div class="content content-4">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum quam, exercitationem animi culpa esse eos quo assumenda error saepe sit sed at sunt! Illo, vitae dolore itaque saepe laudantium ullam.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        function toggle(id) {
+            if($('.content-'+id).hasClass('active')) {
+                $('.content').removeClass('active');   
+                $('.content-'+id).removeClass('active');
+                $('.icon-'+id).addClass('bx-plus').removeClass('bx-minus');
+                
+            } else {
+                $('.content').removeClass('active'); 
+                $('.content-'+id).addClass('active');
+                $('.icon-'+id).addClass('bx-minus').removeClass('bx-plus');
+            }
+        }
+    </script>
+</body>
+</html>
